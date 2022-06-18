@@ -1,0 +1,17 @@
+server:
+  port: 8086
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka
+    eureka-server-read-timeout-seconds: 2000
+  instance:
+    prefer-ip-address: true
+
+
+spring:
+  application:
+    name: api
+
