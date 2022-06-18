@@ -15,8 +15,7 @@ Basketball; Training; Microservices; Service Registration
 ### 1.2项目概述
 2021年全运会辽宁省男子篮球队U22联队夺得金牌，而U19联队并未在小组赛出线。球队除了要考虑CBA联赛队伍的重组外，青训也提上辽宁省体育局的日程。该项目包含领队、教练、球员三个层次下的多个角色。领队需完成球员注册、转会、合同管理三项功能，教练具备技术统计查看与分析、球员训练数据查看与分析、比赛赛程上传与输入等功能，专能训练师具备体能数统、体能数据上传功能。
 篮球俱乐部球员训练系统以总经理、球队经理、教练、助理教练及训练师五种角色对个人中心查阅、用户管理、球员管理、训练规划、训练分析及球员分析六项功能完成系统全部工作。
-![image-20220618130754573](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618130754573.png)
-
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/107730421/174424002-61657d01-b091-47ed-a86f-09d7de645496.png">
 ### 1.3 核心功能需求描述
 #### 1.3.1 比赛分析及训练分析
 需求编号：CTS-CEO-6
@@ -52,7 +51,8 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 本系统在功能上划分为六项，分别是以登录、注册、权限鉴别和修改密码组成的通用功能；以用户角色授权、职位调动、解约组成的用户管理功能模块；对训练规划的新增、修改和查阅组成训练规划功能模块；以数据统计的查看、数据录入和比赛搜索组成训练和比赛分析功能模块；由联赛签约、球员注册和球员调动组成的球员管理模块以及由雷达图和竞技走势组成的球员分析模块。
 
-![image-20220618130835943](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618130835943.png)
+<img width="403" alt="image" src="https://user-images.githubusercontent.com/107730421/174424006-2aa105f7-a702-4a8a-8d2f-0082a0a6cdc7.png">
+
 
 ### 2.2 架构设计
 
@@ -62,7 +62,8 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 服务提供者根据处理内容不同使用两个不同的平台进行开发，而后根据微服务特性在服务注册中心实现跨平台交互。将基于随机森林算法对球员训练数据分析的模型使用Python平台实现，并使用Flask框架进行封装并接入Eureka服务注册中心；将对数据库进行增删改操作的服务模块使用Mybatis封装通用映射并使用Spring Boot组成多端口的微服务模组。
 
-![image-20220618130944360](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618130944360.png)
+<img width="386" alt="image" src="https://user-images.githubusercontent.com/107730421/174424013-39901014-66e6-4ec2-a89e-224c0ea86bf3.png">
+
 
 ## 3.项目详细设计
 
@@ -70,7 +71,8 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 针对平台使用者（即用户），针对其所在单位和职位进行拓展，针对用户的职位对应平台内使用的功能，通过所在单位相应相应级别权限。用户可以管理球员合同标签，监测球员合同意向，球员合同标签对应相应球员。球员通过分属单位可以参加对应级别比赛，在比赛中的数据统计信息存入数据库。
 
-![image-20220618131013349](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131013349.png)
+<img width="386" alt="image" src="https://user-images.githubusercontent.com/107730421/174424016-6c128730-916b-43ac-b9fb-09baeea3627f.png">
+
 
 ### 3.2 服务注册中心机制设计
 
@@ -103,13 +105,14 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 通过日期区间选择器选择要查询比赛和训练的起止时间，搜索在时间范围内的比赛。对查询的比赛通过抽屉栏的展开可以查询在该场比赛中所有球员的数据统计以及系统分析的球员状态。
 
-![image-20220618131202630](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131202630.png)
+<img width="167" alt="image" src="https://user-images.githubusercontent.com/107730421/174424019-657caf9c-a211-472d-8a31-5db272c3d7ec.png">
 
 #### 3.3.4 用户查询与筛选
 
 总经理在进行角色管理时，可对本部门所有职工以及下属部门所有职工进行管理。如果管理人较多的情况下，会存在查找时间较长等情况出现。在本模块设计中，通过使用姓名/手机号搜索栏可以进行模糊查询；同时，在表格中，也通过表头的筛选机制选择指定单位或指定职位的所有员工。
 
-![image-20220618131221093](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131221093.png)
+<img width="151" alt="image" src="https://user-images.githubusercontent.com/107730421/174424024-cbe1c4de-0545-478e-90d5-a6d5377d0a30.png">
+
 
 ## 4.数据模型与预测
 
@@ -125,7 +128,7 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 以43号决策树的部分决策过程为例，当得分大于等于8.5分时，会考察比赛是否为训练赛，确认为训练赛后考察犯规数是否小于等于5.5，以此规则直到获得基尼指数为最高纯净值时该决策结果即为本决策树决策结果。通过所有决策树构成的随机森林的结果统计，获取最终结果。
 
-![image-20220618131308461](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131308461.png)
+<img width="284" alt="image" src="https://user-images.githubusercontent.com/107730421/174424030-95cbb3fc-f9a1-4431-bf12-2013d94644ce.png">
 
 ## 5.项目实现
 
@@ -133,28 +136,30 @@ CTS-CEO-7-3 通过姓名点击进入蒙版，蒙版中显示该球员近十场�
 
 在多角色一体化平台设计中，通过一个登录接口实现个人主页中的定制化导航栏是本小节设计关键。在对个人中心界面进行初始化时，通过获取用户对应角色所拥有的权限列表将其映射为导航栏信息，完成该设计。
 
-![image-20220618131342319](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131342319.png)![image-20220618131346968](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131346968.png)
+<img width="128" alt="image" src="https://user-images.githubusercontent.com/107730421/174424033-8ad2b570-4bbd-4680-be8e-4e714b384986.png">
+<img width="124" alt="image" src="https://user-images.githubusercontent.com/107730421/174424034-185970a7-68fc-434c-8ec0-b674afd08813.png">
+
 
 ### 5.2 指定单位/职位筛选栏
 
 在<th>标签中装入<el-dropdown>标签并绑定事件，参数在<el-dropdown-menu>中使用v-model绑定，参数值使用command绑定。在model中设置空数组，当数据满足参数要求时，向空数组中加入该对象与标签绑定。设置一个布尔类型初始值，当筛选结束为空时，布尔值设置为True，显示未搜索到结果的提示信息。
 
-![image-20220618131439757](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131439757.png)
+<img width="183" alt="image" src="https://user-images.githubusercontent.com/107730421/174424039-95ac3f75-3ddf-47d8-89e2-f5813c6437d9.png">
 
 ### 5.3 姓名/手机号模糊搜索
 
 在<input>标签中加入@input属性绑定事件，对目标列表进行排查，对姓名属性或者手机号属性中包含参数（即item.name.indexOf(key_word)>-1）的对象加入到预先设置好的空数组中，在事件触发时对数组和布尔值初始化。
 
-![image-20220618131429642](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131429642.png)
+<img width="278" alt="image" src="https://user-images.githubusercontent.com/107730421/174424044-e9b2edd1-8e1d-4fb1-8dde-e0b1e2b240fa.png">
 
 ### 5.4 球员分析模块雷达图设计与实现
 
 通过echarts.init(document.getElementById(this.player.id))初始化echarts组件，并将数据渲染到option.series.data.value中，可实现雷达图的展示效果。如图5.14所示。在数据获取中，雷达图需要展示平均数据，为六个浮点数组成的数组；在球员姓名的超链接处还要显示球员近十场比赛的数据，因此使用JSON在后端对数据进行封装。
 
-![image-20220618131502166](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131502166.png)
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/107730421/174424048-af16b6d9-a2ee-4d9c-ae63-5f2459b2958b.png">
 
 ### 5.5 训练规划模块代办事件设计与实现
 
 使用<el-calendar>标签初始化日历组件，设置内容自定义。通过调用接口getAllPlan获取训练计划。使用组件中data.day.split('-').slice(1)[0]获取月份，data.day.split('-').slice(2).join('-')获取日期，训练日期与数值匹配时，会添加训练标签至日历中。
 
-![image-20220618131526493](/Users/liangyulong/Library/Application Support/typora-user-images/image-20220618131526493.png)
+<img width="294" alt="image" src="https://user-images.githubusercontent.com/107730421/174424050-65ff91d6-6dac-44eb-8aa2-c4584f7b96ca.png">
