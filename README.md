@@ -1,4 +1,4 @@
-# Graduation-Project_Yulong_DPU_CS
+# Basketball club training system  
 The basketball club player training system was designed for my undergraduate graduation and completed the writing of graduation thesis. The project completed the distributed development with Vue and spring cloud framework.
 ## 摘要
 本设计针对辽宁省男子篮球俱乐部在全运会中展现出青训队员能力不足的问题，通过开发集成球队管理，训练规划和球员分析的多角色一体化平台，帮助球队挖掘潜力球员。本项目采用Vue + Spring Cloud框架实现前后端分离的微服务架构设计，使用服务注册中心和负载均衡的架构特点，完成系统的并发与弹性扩容。此外，使用随机森林算法完成训练数据的分析和预测，并使用可视化组件直观显示球员的竞技状态和技术特点。
